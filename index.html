@@ -34,10 +34,61 @@
         <p> Proximamente agregare mis proyectos aquí... </p>
     </section>
 
-    <!-- Sección: Contacto -->
+    <!-- Sección: Contacto Actualizada -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p> Email: felipedroguett18@gmail.com </p>
+        <div class="formulario-container">
+            <form id="formulario-contacto">
+                <!-- Nombre -->
+                 <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                 </div>
+
+                <!-- Email -->
+                 <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                 </div>
+
+                <!-- Asunto -->
+                 <div>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                 </div>
+
+                <!-- Mensaje -->
+                 <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                 </div>
+
+                <!-- Tipo de Consulta -->
+                 <div>
+                    <label>Tipo de consulta:</label>
+                    <label>
+                        <input type="radio" name="tipo" value="trabajo"> Trabajo
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo" value="colaboracion"> Colaboracion
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo" value="otro"> Otro
+                    </label>
+                 </div>
+
+                <!-- Newsletter -->
+                 <div>
+                    <label>
+                        <input type="checkbox" name="newsletter">
+                        Quiero recibir novedades
+                    </label>
+                 </div>
+
+                <!-- Boton -->
+                 <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
     </section>
 
     <!-- Pie de Página -->
