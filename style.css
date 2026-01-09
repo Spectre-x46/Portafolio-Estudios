@@ -39,11 +39,14 @@ header h1 {
     text-shadow: var(--text-glow)
 }
 
-/* Navegacion */
+/* Navegación */
 nav {
-    background-color: #0D1B26;
-    padding: 1rem;
+    background-color: var(--input-bg);
+    padding: 0.5rem;
     border-bottom: 1px solid var(--ally-blue);
+    /* Asegura que el nav no se estire más de lo necesario */
+    display: flex; 
+    justify-content: center;
 }
 
 nav ul {
@@ -51,37 +54,54 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 
-nav a { /* Enlaces */
-    color: var(--ally-blue);
+nav a { 
+    color: var(--neon-white);
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    
+    /* CAMBIO CLAVE: inline-block */
+    /* Permite darles padding (espacio de clic) sin que se vuelvan bloques rígidos */
+    display: inline-block; 
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent; /* Reserva el espacio para el borde en hover */
+    border-radius: 4px;
 }
 
-nav a:hover { /* Solo cuando el cursor se coloca sobre el enlace */
+nav a:hover { 
     color: var(--ally-cyan);
+    /* Efecto de borde neón solo al pasar el mouse */
+    border-color: var(--ally-cyan);
     text-shadow: 0 0 8px var(--ally-cyan);
+    box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.2), 0 0 10px rgba(0, 229, 255, 0.2);
+    background-color: rgba(0, 229, 255, 0.05); 
 }
 
 /* Secciones */
 section {
-    padding: 2rem 2rem;
-    max-width: 1000px;
+    padding: 4rem 2rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 section h2 {
+
     color:var(--ally-cyan);
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Formulario */
 .formulario-container {
     max-width: 600px;
+    margin: 0 auto; /* Centra el bloque del formulario */
     background: var(--input-bg);
     padding: 20px;
     border: 1px solid var(--ally-blue);
@@ -145,39 +165,30 @@ footer {
     border-top: 1px solid var(--ally-cyan);
 }
 
+/* Modelo de Caja (Box Model)*/
 .proyectos-grid {
     display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
 .proyecto-card {
-    /* Content: Ancho del programa */
-    width: 300px;
-
-    /* Padding: Espacio interno de seguridad */
-    padding: 1.2rem;
-
-    /* Padding: Espacio interno de seguridad */
-    border: 2px solid var(--ally-blue);
+    flex: 1;   /* Cada caja toma 1 parte igual del espacio */
+    min-width: 250px;  /* Pero no dejes que se achiquen más de esto */
+    padding: 1.2rem;    /* Padding: Espacio interno de seguridad */
+    border: 2px solid var(--ally-blue); /* Border: Línea de luz neón */
     border-radius: 8px;
-
-    /* Fondo */
-    background-color: var(--input-bg);
-
-    /* Sombra Efecto 3D */
-    box-shadow: 0 4px 6px var(--ally-cyan);
-
-    /* Transcicion Suave*/
-    transition: transform 0.3s;
+    background-color: var(--input-bg);  /* Fondo */
+    box-shadow: 0 4px 6px var(--ally-cyan); /* Sombra Efecto 3D */
+    transition: transform 0.3s; /* Transcicion Suave*/
 }
 
 .proyecto-card:hover {
     transform: translateY(-5px);
     border-color: var(--ally-cyan);
-    box-shadow: 0 6px 12px var(--bg-dark);
+    box-shadow: 0 6px 12px var(--ally-cyan);
 }
 
 .proyecto-card h3 {
@@ -187,4 +198,35 @@ footer {
 
 .proyecto-card p {
     margin-bottom: 0.5rem;
+}
+
+/* Responsive Design /*
+/* Tablet y Desktop Pequeño */
+@media (max-width: 1024px) {
+    section {
+        max-width: 900px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .proyectos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proyecto-card {
+        width: 100%;
+    }
 }
