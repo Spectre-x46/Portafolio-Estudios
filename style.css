@@ -1,0 +1,134 @@
+/* --- Paleta de Colores --- */
+:root {
+    --bg-dark:       #05080A;  /* Fondo profundo */
+    --ally-cyan:     #00E5FF;  /* Cyan Neón (Principal) */
+    --ally-blue:     #0087FF;  /* Azul de apoyo */
+    --neon-white:    #E6FDFF;  /* Blanco Neón para lectura */
+    --input-bg:      #0A141D;  /* Fondo de inputs */
+    --text-glow:     0 0 10px var(--ally-cyan); /* Brillo de títulos */
+}
+
+/* Reset Basico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Estilos Generales */
+body {
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark);  /* Fondo */
+    color: var(--neon-white);          /* Texto */   
+}
+
+/* Header */ 
+header {
+    background-color: var(--input-bg);
+    color: var(--neon-white);
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 2px solid var(--ally-cyan)
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    text-shadow: var(--text-glow)
+}
+
+/* Navegacion */
+nav {
+    background-color: #0D1B26;
+    padding: 1rem;
+    border-bottom: 1px solid var(--ally-blue);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a { /* Enlaces */
+    color: var(--ally-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover { /* Solo cuando el cursor se coloca sobre el enlace */
+    color: var(--ally-cyan);
+    text-shadow: 0 0 8px var(--ally-cyan);
+}
+
+/* Secciones */
+section {
+    padding: 2rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color:var(--ally-cyan);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+/* Formulario */
+.formulario-container {
+    max-width: 600px;
+    background: var(--input-bg)
+    padding: 20px;
+    border: 1px solid var(--ally-blue);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: var(--ally-cyan)
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--ally-blue);
+    color: white;
+    border-radius: 4px:
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--ally-cyan);
+    box-shadow: 0 0 10px var(--ally-cyan);
+}
+
+button:hover {
+    background-color: var(--ally-cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--ally-cyan);
+}
+
+/* Footer */
+footer {
+    background-color: var(--input-bg);
+    color: var(--ally-cyan);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--ally-cyan);
+}
