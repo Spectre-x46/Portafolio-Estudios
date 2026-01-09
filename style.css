@@ -29,7 +29,7 @@ header {
     color: var(--neon-white);
     text-align: center;
     padding: 2rem;
-    border-bottom: 2px solid var(--ally-cyan)
+    border-bottom: 2px solid var(--ally-cyan);
 }
 
 header h1 {
@@ -82,7 +82,7 @@ section h2 {
 /* Formulario */
 .formulario-container {
     max-width: 600px;
-    background: var(--input-bg)
+    background: var(--input-bg);
     padding: 20px;
     border: 1px solid var(--ally-blue);
 }
@@ -108,13 +108,25 @@ textarea {
     background-color: var(--bg-dark);
     border: 1px solid var(--ally-blue);
     color: white;
-    border-radius: 4px:
+    border-radius: 4px;
 }
 
 input:focus {
     outline: none;
     border-color: var(--ally-cyan);
     box-shadow: 0 0 10px var(--ally-cyan);
+}
+
+/* Botón - Estilo base */
+button {
+    background-color: transparent;
+    color: var(--ally-cyan);
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--ally-cyan);
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -131,4 +143,48 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
     border-top: 1px solid var(--ally-cyan);
+}
+
+.proyectos-grid {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.proyecto-card {
+    /* Content: Ancho del programa */
+    width: 300px;
+
+    /* Padding: Espacio interno de seguridad */
+    padding: 1.2rem;
+
+    /* Padding: Espacio interno de seguridad */
+    border: 2px solid var(--ally-blue);
+    border-radius: 8px;
+
+    /* Fondo */
+    background-color: var(--input-bg);
+
+    /* Sombra Efecto 3D */
+    box-shadow: 0 4px 6px var(--ally-cyan);
+
+    /* Transcicion Suave*/
+    transition: transform 0.3s;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--ally-cyan);
+    box-shadow: 0 6px 12px var(--bg-dark);
+}
+
+.proyecto-card h3 {
+    color: var(--neon-white);
+    margin-bottom: 1rem;
+}
+
+.proyecto-card p {
+    margin-bottom: 0.5rem;
 }
