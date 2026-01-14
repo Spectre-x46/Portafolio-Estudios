@@ -65,6 +65,12 @@
                     <a class="nav-link" href="#contacto">CONTACTO</a>
                 </li>
             </ul>
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                <button id="btnTema" class="btn btn-outline-cyan btn-sm ms-lg-3 mt-2 mt-lg-0"> 🌙 MODO OSCURO
+                 </button>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -143,13 +149,15 @@
                             <!-- Nombre -->
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre:</label>
-                                <input type="text" id="nombre" name="nombre" class="form-control" required>
+                                <input type="text" id="nombre" data-js="nombre-input" name="nombre" class="form-control" required>
+                                <span class="error-msg" data-js="nombre-error" style="color: #ff4b2b; font-size: 0.8rem; display: none;"></span>
                             </div>
 
                             <!-- Email -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email:</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
+                                <input type="email" id="email" data-js="email-input" name="email" class="form-control" required>
+                                <span class="error-msg" data-js="email-error" style="color: #ff4b2b; font-size: 0.8rem; display: none;"></span>
                             </div>
 
                             <!-- Asunto -->
@@ -189,9 +197,13 @@
                             </label>
                 </div>
 
+                <!-- Mensaje de Contacto recibido -->
+                 <div id="mensaje-exito" style="display: none; color: var(--ally-cyan); text-align: center; margin-bottom: 15px; font-weight: bold;"> ¡MENSAJE ENVIADO CON ÉXITO!
+                </div>
+                
                 <!-- Boton -->
                 <div class="text-center mt-4">
-                <button type="submit" class="btn btn-outline-cyan">Enviar Mensaje</button>
+                    <button type="submit" class="btn btn-outline-cyan">Enviar Mensaje</button>
                 </div>
             </form>
         </div>

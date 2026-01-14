@@ -164,3 +164,81 @@ footer {
     padding: 1rem; /* Volvemos a 1rem para que sea más sutil como antes */
     border-top: 1px solid var(--ally-cyan);
 }
+
+/* --- REDISEÑO MODO CLARO PROFESIONAL (CLASE 11 - FINAL) --- */
+
+/* 1. Fondo general más suave */
+body.modo-claro {
+    background-color: #F8FAFC !important;
+    color: #1A202C !important;
+}
+
+/* --- REDISEÑO MODO CLARO PROFESIONAL (CLASE 11 - FINAL COMPLETADO) --- */
+
+/* 1. Fondo y Texto Base */
+body.modo-claro {
+    background-color: #F8FAFC !important;
+    color: #1A202C !important;
+}
+
+/* 2. Header y Carrusel (Sin bloques negros) */
+body.modo-claro #header-carousel, 
+body.modo-claro .carousel-item {
+    background-color: #FFFFFF !important; 
+    border-bottom: 1px solid #E2E8F0;
+}
+
+body.modo-claro .carousel-caption h1 {
+    color: #0087FF !important; 
+    text-shadow: none !important;
+}
+
+body.modo-claro .carousel-caption p {
+    color: #4A5568 !important;
+}
+
+/* 3. VISIBILIDAD DEL MENÚ (Lo que faltaba) */
+body.modo-claro .navbar-brand {
+    color: #0087FF !important; /* Logo 'MENU' en azul sólido */
+    text-shadow: none !important;
+}
+
+body.modo-claro .nav-link {
+    color: #1A202C !important; /* Letras del menú en gris oscuro */
+    font-weight: 500;
+}
+
+body.modo-claro .navbar-toggler {
+    border-color: #1A202C !important; /* Borde del botón hamburguesa */
+}
+
+body.modo-claro .navbar-toggler-icon {
+    filter: invert(1) !important; /* Cambia el icono de blanco a negro */
+}
+
+/* 4. Proyectos y Contacto (Legibilidad total) */
+body.modo-claro .proyecto-card,
+body.modo-claro .formulario-container {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    color: #1A202C !important;
+}
+
+body.modo-claro .form-label {
+    color: #2D3748 !important; 
+    text-shadow: none !important;
+}
+
+body.modo-claro .form-control {
+    background-color: #F7FAFC !important;
+    border: 1px solid #CBD5E0 !important;
+    color: #1A202C !important;
+}
+
+/* 5. Footer */
+body.modo-claro footer, 
+body.modo-claro .navbar {
+    background-color: #FFFFFF !important;
+    color: #1A202C !important;
+    border-color: #E2E8F0 !important;
+}
