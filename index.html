@@ -9,24 +9,64 @@
 </head>
 <body>
 <!-- Encabezado principal -->
-<header>
-    <h1> Hola! Soy Felipe</h1>
-    <p>Desarrollador Full Stack ; Comenzando en Front End</p>
+<header class="p-0">
+    <div id="carouselHeader" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1 class="display-4 fw-bold">DESARROLLADOR FULL STACK</h1>
+                    <p class="lead">Construyendo soluciones web modernas y seguras</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1 class="display-4 fw-bold">FRONT-END & DISEÑO</h1>
+                    <p class="lead">Interfaces interactivas con HTML, CSS, JS y Bootstrap</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1 class="display-4 fw-bold">¿BUSCAS COLABORACIÓN?</h1>
+                    <a href="#contacto" class="btn btn-outline-cyan mt-3">CONTÁCTAME</a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 </header>
 
 <!-- Navegacion -->
-<nav class="navbar navbar-expand-lg border-bottom border-primary" style="background-color: var(--input-bg);">
-    <div class="container justify-content-center">
-        <ul class="nav gap-3"> <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#sobre-mi">Sobre Mi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#proyectos">Proyectos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#contacto">Contacto</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--input-bg); border-bottom: 2px solid var(--ally-blue);">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#" style="color: var(--ally-cyan); text-shadow: var(--text-glow);">
+            MENU
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre-mi">SOBRE MÍ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">PROYECTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
@@ -151,7 +191,9 @@
                 </div>
 
                 <!-- Boton -->
-                <button type="submit" class="btn btn-outline-cyan w-100">Enviar Mensaje</button>
+                <div class="text-center mt-4">
+                <button type="submit" class="btn btn-outline-cyan">Enviar Mensaje</button>
+                </div>
             </form>
         </div>
         </div>

@@ -38,17 +38,46 @@ section h2 {
     text-align: center;
 }
 
-/* Header */ 
-header {
-    background-color: var(--input-bg);
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 2px solid var(--ally-cyan);
+/* Header Actualizado para carrusel*/ 
+#header-carousel, .carousel-item {
+    height: 110px !important; /* Altura mínima para que sea una franja */
+    min-height: 110px !important;
+    background-color: var(--bg-dark);
 }
 
-header h1 {
-    font-size: 3rem;
-    text-shadow: var(--text-glow)
+.carousel-caption {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    padding: 0 !important;
+}
+
+/* Reducción de letra para que no "explote" en 110px */
+.carousel-caption h1 {
+    font-size: 1.4rem !important; /* Tamaño equilibrado para la franja */
+    margin: 0 !important;
+    text-shadow: var(--text-glow);
+    letter-spacing: 2px;
+}
+
+.carousel-caption p {
+    font-size: 0.85rem !important;
+    margin: 2px 0 0 0 !important;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+/* Hacer que el botón de menú sea Cyan al presionar */
+.navbar-toggler:focus {
+    box-shadow: 0 0 10px var(--ally-cyan);
 }
 
 /* Navegación */
