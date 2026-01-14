@@ -17,216 +17,121 @@
 
 /* Estilos Generales */
 body {
-    font-family: arial, sans-serif;
+    font-family:  arial, sans-serif;
     line-height: 1.6;
     background-color: var(--bg-dark);  /* Fondo */
     color: var(--neon-white);          /* Texto */   
 }
 
+/* Ajuste de secciones: Ahora usamos .container en HTML, así que limpiamos aquí */
+section {
+    padding: 5rem 0; /* Solo dejamos el padding vertical */
+}
+
+section h2 {
+    color: var(--ally-cyan);
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: var(--text-glow);
+    text-align: center;
+}
+
 /* Header */ 
 header {
     background-color: var(--input-bg);
-    color: var(--neon-white);
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
     border-bottom: 2px solid var(--ally-cyan);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: normal;
+    font-size: 3rem;
     text-shadow: var(--text-glow)
 }
 
 /* Navegación */
-nav {
-    background-color: var(--input-bg);
-    padding: 0.5rem;
-    border-bottom: 1px solid var(--ally-blue);
-    /* Asegura que el nav no se estire más de lo necesario */
-    display: flex; 
-    justify-content: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-}
-
-nav a { 
-    color: var(--neon-white);
-    text-decoration: none;
-    font-weight: bold;
+.nav-link {
     transition: 0.3s;
-    
-    /* CAMBIO CLAVE: inline-block */
-    /* Permite darles padding (espacio de clic) sin que se vuelvan bloques rígidos */
-    display: inline-block; 
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent; /* Reserva el espacio para el borde en hover */
+    border: 1px solid transparent;
     border-radius: 4px;
 }
 
-nav a:hover { 
-    color: var(--ally-cyan);
-    /* Efecto de borde neón solo al pasar el mouse */
-    border-color: var(--ally-cyan);
-    text-shadow: 0 0 8px var(--ally-cyan);
-    box-shadow: inset 0 0 10px rgba(0, 229, 255, 0.2), 0 0 10px rgba(0, 229, 255, 0.2);
-    background-color: rgba(0, 229, 255, 0.05); 
-}
-
-/* Secciones */
-section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section h2 {
-
-    color:var(--ally-cyan);
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Formulario */
-.formulario-container {
-    max-width: 600px;
-    margin: 0 auto; /* Centra el bloque del formulario */
-    background: var(--input-bg);
-    padding: 20px;
-    border: 1px solid var(--ally-blue);
-}
-
-form div {
-    margin-bottom: 1rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-    color: var(--ally-cyan)
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    padding: 0.3rem;
-    background-color: var(--bg-dark);
-    border: 1px solid var(--ally-blue);
-    color: white;
-    border-radius: 4px;
-}
-
-input:focus {
-    outline: none;
+.nav-link:hover {
+    color: var(--ally-cyan) !important;
     border-color: var(--ally-cyan);
     box-shadow: 0 0 10px var(--ally-cyan);
 }
 
-/* Botón - Estilo base */
-button {
-    background-color: transparent;
-    color: var(--ally-cyan);
-    padding: 0.75rem 2rem;
-    border: 1px solid var(--ally-cyan);
-    border-radius: 4px;
-    cursor: pointer;
+/* Secciones */
+/* Tarjetas de Proyectos */
+.proyecto-card {
+    background-color: var(--input-bg);
+    border: 2px solid var(--ally-blue);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 229, 255, 0.1);
+    transition: 0.3s;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--ally-cyan);
+    box-shadow: 0 0 15px var(--ally-cyan);
+}
+
+/* Formulario (Tenemos que forzar el modo oscuro para mantener la estetica porque boostrap trae por defecto su fondo */
+/* --- Sección de Contacto: El Marco --- */
+.formulario-container {
+    background-color: var(--input-bg);
+    padding: 30px;
+    border: 1px solid var(--ally-blue); /* Restauramos el borde azul original */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 135, 255, 0.1);
+}
+
+/* --- Etiquetas y Control de Formulario --- */
+.form-label, .form-check-label {
+    color: var(--ally-cyan) !important;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: var(--bg-dark) !important;
+    border: 1px solid var(--ally-blue) !important;
+    color: white !important;
+    border-radius: 4px !important;
+}
+
+/* Efecto Neón al escribir */
+.form-control:focus {
+    border-color: var(--ally-cyan) !important;
+    box-shadow: 0 0 10px var(--ally-cyan) !important;
+}
+
+/* --- Botón Personalizado --- */
+.btn-outline-cyan {
+    color: var(--ally-cyan) !important;
+    border: 1px solid var(--ally-cyan) !important;
+    background-color: transparent !important;
+    padding: 0.75rem 2.5rem !important;
+    font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
 }
 
-button:hover {
-    background-color: var(--ally-cyan);
-    color: var(--bg-dark);
+.btn-outline-cyan:hover {
+    background-color: var(--ally-cyan) !important;
+    color: var(--bg-dark) !important;
     box-shadow: 0 0 20px var(--ally-cyan);
 }
-
-/* Footer */
+/* 4. Footer */
 footer {
     background-color: var(--input-bg);
     color: var(--ally-cyan);
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem; /* Volvemos a 1rem para que sea más sutil como antes */
     border-top: 1px solid var(--ally-cyan);
-}
-
-/* Modelo de Caja (Box Model)*/
-.proyectos-grid {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.proyecto-card {
-    flex: 1;   /* Cada caja toma 1 parte igual del espacio */
-    min-width: 250px;  /* Pero no dejes que se achiquen más de esto */
-    padding: 1.2rem;    /* Padding: Espacio interno de seguridad */
-    border: 2px solid var(--ally-blue); /* Border: Línea de luz neón */
-    border-radius: 8px;
-    background-color: var(--input-bg);  /* Fondo */
-    box-shadow: 0 4px 6px var(--ally-cyan); /* Sombra Efecto 3D */
-    transition: transform 0.3s; /* Transcicion Suave*/
-}
-
-.proyecto-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--ally-cyan);
-    box-shadow: 0 6px 12px var(--ally-cyan);
-}
-
-.proyecto-card h3 {
-    color: var(--neon-white);
-    margin-bottom: 1rem;
-}
-
-.proyecto-card p {
-    margin-bottom: 0.5rem;
-}
-
-/* Responsive Design */
-/* Tablet y Desktop Pequeño */
-@media (max-width: 1024px) {
-    section {
-        max-width: 900px;
-    }
-}
-
-/* Móvil */
-@media (max-width: 767px) {
-    nav ul {
-        flex-direction: row;
-        align-items: center;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .proyectos-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proyecto-card {
-        width: 100%;
-    }
 }

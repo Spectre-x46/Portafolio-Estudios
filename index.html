@@ -3,114 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Portafolio Full Stack</title>
 </head>
 <body>
-    <!-- Encabezado principal -->
-    <header>
-        <h1> Hola! Soy Felipe</h1>
-        <p>Desarrollador Full Stack ; Comenzando en Front End</p>
-    </header>
+<!-- Encabezado principal -->
+<header>
+    <h1> Hola! Soy Felipe</h1>
+    <p>Desarrollador Full Stack ; Comenzando en Front End</p>
+</header>
 
-    <!-- Navegacion -->
-     <nav>
-        <ul>
-            <li><a href="#sobre-mi">Sobre Mi</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+<!-- Navegacion -->
+<nav class="navbar navbar-expand-lg border-bottom border-primary" style="background-color: var(--input-bg);">
+    <div class="container justify-content-center">
+        <ul class="nav gap-3"> <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#sobre-mi">Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white fw-bold" href="#contacto">Contacto</a>
+            </li>
         </ul>
-     </nav>
+    </div>
+</nav>
 
     <!-- Seccion: Sobre Mi -->
     <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p> Soy estudiante de Full Stack y Ciberseguridad </p>
-        <p> Actualmente estoy aprendiendo HTML, CSS y Javascript</p>
+    <div class="container">
+    <h2>Sobre Mí</h2>
+        <div class="row">
+        <!-- Columna Izquierda - Foto -->
+            <div class="col-12 col-md-4">
+            <img src="imagen.jpg" alt="Mi foto" class="img-fluid rounded-circle">
+            </div>
+        
+        <!-- Columna Derecha - Descripción -->
+            <div class="col-12 col-md-8">
+                <h3>¡Hola!</h3>
+                <p>Soy estudiante de Full Stack y Ciberseguridad. </p>
+                <p>Actualmente estoy aprendiendo:</p>
+                <ul>
+                    <li>HTML5 Y CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>Diseño Responsivo</li>
+                    <li>Pentesting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     </section>
 
     <!-- Sección: Proyectos -->
     <section id="proyectos">
+    <div class="container">
         <h2>Mis Proyectos</h2>
-        <div class="proyectos-grid">
+        <div class="row g-4">
 
         <!-- Proyecto 1 -->
-            <div class="proyecto-card">
-                <h3>Proyecto 1: Portafolio</h3>
-                <p>Mi primer proyecto web: Este portafolio personal.</p>
-                <p><strong>Tecnologías:</strong> HTML, CSS</p>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <h3>Proyecto 1: Portafolio</h3>
+                    <p>Mi primer proyecto web: Este portafolio personal.</p>
+                    <p><strong>Tecnologías:</strong> HTML, CSS</p>
+                </div>
             </div>
 
         <!-- Proyecto 2 -->
-            <div class="proyecto-card">
-                <h3>Proyecto 2: Calculadora</h3>
-                <p>Una calculadora interactiva con JavaScript.</p>
-                <p><strong>Tecnologías:</strong> HTML, CSS, JS</p>  
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <h3>Proyecto 2: Calculadora</h3>
+                    <p>Una calculadora interactiva con JavaScript.</p>
+                    <p><strong>Tecnologías:</strong> HTML, CSS, JS</p>  
+                </div>
             </div>
 
         <!-- Proyecto 3 -->
-            <div class="proyecto-card">
-                <h3>Proyecto 3: To-Do List</h3>
-                <p>Aplicación para gestionar tareas diarias</p>
-                <p><strong>Tecnologías:</strong> HTML, CSS, JS</p>
-            </div>        
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <h3>Proyecto 3: To-Do List</h3>
+                    <p>Aplicación para gestionar tareas diarias</p>
+                    <p><strong>Tecnologías:</strong> HTML, CSS, JS</p>
+                </div>     
+            </div>
         </div>
+    </div>
     </section>
 
     <!-- Sección: Contacto Actualizada -->
     <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="formulario-container">
-            <form id="formulario-contacto">
-                <!-- Nombre -->
-                 <div>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                 </div>
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="row justify-content-center">  
+                <div class="col-12 col-md-8 col-lg-6"> 
+                    <div class="formulario-container">
+                        <form id="formulario-contacto">
+                            <!-- Nombre -->
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" required>
+                            </div>
 
-                <!-- Email -->
-                 <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                 </div>
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
 
-                <!-- Asunto -->
-                 <div>
-                    <label for="asunto">Asunto:</label>
-                    <input type="text" id="asunto" name="asunto" required>
-                 </div>
+                            <!-- Asunto -->
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label">Asunto:</label>
+                                <input type="text" id="asunto" name="asunto" class="form-control" required>
+                            </div>
 
-                <!-- Mensaje -->
-                 <div>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                 </div>
+                             <!-- Mensaje -->
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label" >Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
+                            </div>
 
-                <!-- Tipo de Consulta -->
-                 <div>
-                    <label>Tipo de consulta:</label>
-                    <label>
-                        <input type="radio" name="tipo" value="trabajo"> Trabajo
-                    </label>
-                    <label>
-                        <input type="radio" name="tipo" value="colaboracion"> Colaboracion
-                    </label>
-                    <label>
-                        <input type="radio" name="tipo" value="otro"> Otro
-                    </label>
-                 </div>
+                            <!-- Tipo de Consulta -->
+                            <div class="mb-3">
+                                <label class="form-label d-block">Tipo de consulta:</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipo" id="trabajo" value="trabajo">
+                                        <label class="form-check-label" for="trabajo">Trabajo</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipo" id="colaboracion" value="colaboracion">
+                                        <label class="form-check-label" for="colaboracion">Colaboración</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="tipo" id="otro" value="otro">
+                                        <label class="form-check-label" for="otro">Otros</label>
+                                    </div>
+                            </div>
 
                 <!-- Newsletter -->
-                 <div>
-                    <label>
-                        <input type="checkbox" name="newsletter">
-                        Quiero recibir novedades
-                    </label>
-                 </div>
+                <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" name="newsletter" id="newsletter">
+                            <label class="form-check-label" for="newsletter">
+                                Quiero recibir novedades
+                            </label>
+                </div>
 
                 <!-- Boton -->
-                 <button type="submit">Enviar Mensaje</button>
+                <button type="submit" class="btn btn-outline-cyan w-100">Enviar Mensaje</button>
             </form>
+        </div>
         </div>
     </section>
 
@@ -118,5 +161,6 @@
     <footer>
         <p>2026 Felipe Droguett. Todos los derechos reservados.</p>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
